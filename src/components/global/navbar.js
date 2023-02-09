@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React from 'react';
 import { styled, alpha } from '@mui/material/styles';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
@@ -9,12 +9,12 @@ import InputBase from '@mui/material/InputBase';
 import Badge from '@mui/material/Badge';
 import MenuItem from '@mui/material/MenuItem';
 import Menu from '@mui/material/Menu';
-import MenuIcon from '@mui/icons-material/Menu';
 import SearchIcon from '@mui/icons-material/Search';
 import AccountCircle from '@mui/icons-material/AccountCircle';
 import MailIcon from '@mui/icons-material/Mail';
 import NotificationsIcon from '@mui/icons-material/Notifications';
 import MoreIcon from '@mui/icons-material/MoreVert';
+import { Link as RouterLink } from 'react-router-dom';
 
 const Search = styled('div')(({ theme }) => ({
   position: 'relative',
@@ -55,6 +55,10 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
     },
   },
 }));
+
+const MenuRouterLink = React.forwardRef((props, ref) => (
+  <RouterLink innerRef={ref} {...props} />
+));
 
 export default function NavBar() {
   const [anchorEl, setAnchorEl] = React.useState(null);
@@ -97,7 +101,7 @@ export default function NavBar() {
       open={isMenuOpen}
       onClose={handleMenuClose}
     >
-      <MenuItem onClick={handleMenuClose}>User Profile</MenuItem>
+      <MenuItem  component={MenuRouterLink} to='/tab' onClick={handleMenuClose}>User Profile</MenuItem>
       <MenuItem onClick={handleMenuClose}>Access Type</MenuItem>
       <MenuItem onClick={handleMenuClose}>Logout</MenuItem>
     </Menu>
@@ -159,7 +163,14 @@ export default function NavBar() {
     <Box sx={{ flexGrow: 1 }}>
       <AppBar sx={{ background: "#063970" }}>
         <Toolbar>
-        <img  src='https://th.bing.com/th/id/OIP.M9ythZAipX-4C1IC_PNy6QAAAA?pid=ImgDet&rs=1' alt='xsjhj' height='60px' color="inherit"/>
+          <IconButton>
+        <img  src='https://th.bing.com/th/id/OIP.M9ythZAipX-4C1IC_PNy6QAAAA?pid=ImgDet&rs=1'
+         alt='xsjhj' 
+         height='60px' 
+         color="inherit"
+         to='/'
+         component={MenuRouterLink}/>
+         </IconButton>
           <Search>
             <SearchIconWrapper>
               <SearchIcon />
