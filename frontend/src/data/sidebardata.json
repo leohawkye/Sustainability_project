@@ -1,0 +1,100 @@
+[
+    {
+        "title": "Dashboard",
+        "icon": "bi bi-speedometer2",
+        "childrens": [
+            {
+                "title": "Home",
+                "icon": "bi bi-clipboard-data",
+                "path": "/dashboard"
+            },
+            {
+                "title": "About",
+                "icon": "bi-info-circle-fill",
+                "path": "/dataEntry"
+            },
+            {
+                "title": "Contact",
+                "icon": "bi-phone-fill",
+                "childrens": [
+                    {
+                        "title": "Facebook",
+                        "icon": "bi-facebook"
+                    },
+                    {
+                        "title": "Twitter",
+                        "icon": "bi-twitter"
+                    },
+                    {
+                        "title": "Instagram",
+                        "icon": "bi-instagram"
+                    }
+                ]
+            },
+            {
+                "title": "FAQ",
+                "icon": "bi-question-circle-fill"
+            }
+        ]
+    },
+    {
+        "title": "Reporting",
+        "icon": "bi bi-clipboard-data-fill",
+        "childrens": [
+            {
+                "title": "Overall",
+                "path": "/login"
+            },
+            {
+                "title": "IC wise",
+                "path": "/register"
+            },
+            {
+                "title": "Project Wise",
+                "path": "/forgot-password"
+            }
+        ]
+    },
+    {
+        "title": "Data Entry",
+        "icon": "bi-person-fill",
+        "childrens": [
+            {
+                "title": "Environment",
+                "path": "/env"
+            },
+            {
+                "title": "Social",
+                "path" : "/social"
+            },
+            {
+                "title": "Governance",
+                "path": "/logout"
+            }
+        ]
+    },
+    {
+        "title": "Scorecard",
+        "icon": "bi-view-list",
+        "childrens": [
+            {
+                "title": "Search",
+                "path": "/search"
+            },
+            {
+                "title": "History",
+                "path": "/history"   
+            }
+        ]
+    },
+    {
+        "title": "Analytics",
+        "icon": "bi bi-bar-chart-line-fill",
+        "path": "/support"
+    },
+    {
+        "title": "Master Data",
+        "icon": "bi-bug",
+        "path": "/report-bug"
+    }
+]

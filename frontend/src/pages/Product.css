@@ -1,0 +1,11 @@
+.product { 
+    display: flex;
+    grid-template-columns: auto auto;
+     justify-content: space-evenly;
+      gap: 60px;
+       
+    }
+    .cardaction 
+    {
+        color: aliceblue;
+    }
